@@ -1,0 +1,75 @@
+body,html {
+    height:100%;
+    padding:0;
+    margin:0;
+  }
+  
+  body {
+    background: #3d3d3d;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+  }
+  svg {
+    width:200px;
+    max-width:100%;
+    max-height:100%;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow:visible;
+  }
+  #outerFlame {
+    transform-origin: bottom center;
+    animation: grow 1s infinite alternate;
+    animation-timing-function: ease-out;
+    
+  }
+  #innerFlame {
+    transform-origin: bottom center;
+    animation: grow 1s infinite alternate;
+    animation-timing-function: cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    animation-delay: -0.1s;
+  }
+  #spark {
+    animation: flyUp 1s infinite;
+   
+  }
+  #spark_2 {
+    animation: flyUp 1.2s infinite;
+  }
+  #spark_3 {
+    animation: flyUpDelay 6s infinite;
+    animation-delay:2.2s
+  }
+  #spark_4 {
+    animation: flyUpDelay 6s infinite;
+    animation-delay:3s
+  }
+  @keyframes grow {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1) translateY(5px);
+    }
+  }
+  @keyframes flyUp {
+    from {
+      opacity:1;
+      transform: translateY(0);
+    }
+    to {
+      opacity:0;
+      transform: translateY(-100px);
+    }
+  }
+  @keyframes flyUpDelay {
+    0% {
+      opacity:1;
+      transform: translateY(0);
+    }
+    50%,100% {
+      opacity:0;
+      transform: translateY(-100px);
+    }
+  }
