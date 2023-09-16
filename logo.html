@@ -85,7 +85,19 @@
         border-radius: 5px;
 
     }
-
+    @media only screen and (max-width: 769px) {
+    .container .box {
+        flex-direction: column;
+    }
+    .container .box .dream {
+      width: 100%;
+    }
+    }
+    @media only screen and (max-width: 643px) {
+    .container .box .dream {
+      width: 100%;
+    }
+    }
   </style>
 
 </head>
@@ -151,7 +163,7 @@
 </div>
 
 <!--Footer-->
-  <footer class="text-center my-3 txtb" id="footerFont"><img src="image/copyright.png" id="footerLogo">        2023 Jony Wijaya All Rights Reserved.</footer>
+  <footer class="text-center my-3 txtb" id="footerFont"><img src="image/copyright.png" id="footerLogo" style="padding-top: 10px;">        2023 Jony Wijaya All Rights Reserved.</footer>
 
   <!--Script Bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
