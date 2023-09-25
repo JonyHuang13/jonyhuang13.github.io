@@ -102,7 +102,7 @@
 
 </head>
 
-<body class="white">
+<body class="white" onload="myFunction">
 
 <!--Navbar-->
   <nav class="navbar navbar-expand-lg">
@@ -133,7 +133,7 @@
 
 <!--Main Content-->
 <br><br>
-<div class="container">
+<div class="container"  id="myDiv">
     <div class="heading">
         <h3>Phone Case</h3>
         <p style="text-align: center;" class="mt-2 mb-4">Refresh if the image don't show up</p>
@@ -189,10 +189,17 @@
 
 <!--Script Loader-->
 <script>
-  $(window).on("load",function(){
-    $(".loader-wrapper").fadeOut("slow");
-  });
-</script>
+  var myVar;
+  
+  function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+  }
+  
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+  }
+  </script>
 
 <!--Script Bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

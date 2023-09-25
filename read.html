@@ -58,7 +58,7 @@
 
 </head>
 
-<body class="white">
+<body class="white"  onload="myFunction">
 
 <!--Navbar-->
   <nav class="navbar navbar-expand-lg">
@@ -88,7 +88,7 @@
   </nav>
 
 <!--Main Content-->
-<main>
+<main id="myDiv">
 <br>
 <br>
 <p class="gugi text-center">Books</p>
@@ -100,20 +100,8 @@
 </div>
 </main>
 
-<!--Footer-->
-  <footer class="text-center my-3 txtb" id="footerFont"><img src="image/copyright.png" id="footerLogo">        2023 Jony Wijaya All Rights Reserved.</footer>
-
-  <!--Script Bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
-    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
-    crossorigin="anonymous"></script>
-</body>
-
 <!--Loader-->
-<div class="loader-wrapper">
+<div class="loader-wrapper" id="ld">
   <div class="loader">
     <svg viewBox="0 0 80 80">
         <circle id="test" cx="40" cy="40" r="32"></circle>
@@ -133,11 +121,30 @@
   </div>
 </div>
 
+<!--Footer-->
+  <footer class="text-center my-3 txtb" id="footerFont"><img src="image/copyright.png" id="footerLogo">        2023 Jony Wijaya All Rights Reserved.</footer>
+
+<!--Script Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"></script>
+
 <!--Script Loader-->
 <script>
-  $(window).on("load",function(){
-    $(".loader-wrapper").fadeOut("slow");
-  });
-</script>
- 
+  var myVar;
+  
+  function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+  }
+  
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+  }
+  </script>
+
+</body> 
 </html>
